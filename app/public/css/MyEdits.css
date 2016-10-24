@@ -1,12 +1,44 @@
-body{
-background-image: url(../images/LOVE.png);
-background-size: 50%, 50%; 
-/*background-color:#b22222; */
+body {
+    background-image: url(../images/love.jpg);
+    background-size: 100%, 75%;
+    /*background-color:#b22222; */
 }
 
-.jumbotron{
-	width: 90%;
-	margin-left: 5%;
-	margin-top: 5%;
-
+.jumbotron {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+    opacity: 0.9;
+    border: black 2px ridge;
+    text-align: center;
 }
+
+#lovePic {
+    height: 230px;
+    width: 300px;
+}
+
+#survey {
+    margin-left: 3%;
+    border: black 2px ridge;
+    margin-bottom: 3%;
+}
+
+#select{
+	text-align: left;
+}
+
+.Links {
+    margin-left: 3%;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+p {
+    margin-left: 3%;
+}
+
+h1 {
+    margin-left: 3%;
+}
+
