@@ -1,0 +1,12 @@
+body{
+background-image: url(../images/LOVE.png);
+background-size: 50%, 50%; 
+/*background-color:#b22222; */
+}
+
+.jumbotron{
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 5%;
+
+}
