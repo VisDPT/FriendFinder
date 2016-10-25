@@ -26,6 +26,7 @@ body {
 
 #select{
 	text-align: left;
+    width: 35%;
 }
 
 .Links {
@@ -33,6 +34,16 @@ body {
     font-weight: bold;
     font-size: 18px;
 }
+#question{
+    text-align: left;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+option{
+    width: 50%;
+}
+
 
 p {
     margin-left: 3%;
