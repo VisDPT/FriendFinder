@@ -1,14 +1,14 @@
 body {
-    background-image: url(../images/love.jpg);
+    background-image: url(../images/oldCouple.jpg);
     background-size: 100%, 75%;
     /*background-color:#b22222; */
 }
 
 .jumbotron {
-    width: 90%;
+    width: 90%; 
     margin-left: 5%;
     margin-top: 5%;
-    opacity: 0.9;
+    opacity: 0.85;
     border: black 2px ridge;
     text-align: center;
 }
