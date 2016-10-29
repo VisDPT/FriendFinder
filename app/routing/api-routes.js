@@ -23,7 +23,7 @@ module.exports = function (app) {
 	// (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
 	// ---------------------------------------------------------------------------
 
-	app.get('/api/friends', function (req, res) {
+	app.get('/api/friend', function (req, res) {
 		res.json(friendsList);
 	});
 
@@ -35,7 +35,7 @@ module.exports = function (app) {
 	// Then the server saves the data to the tableData array)
 	// ---------------------------------------------------------------------------
 
-	app.post('/api/friends', function (req, res) {
+	app.post('/api/friend', function (req, res) {
 		if (friendsList.length < 5) {
 			friendsList.push(req.body);
 			res.json({reservation: true}); // KEY LINE
