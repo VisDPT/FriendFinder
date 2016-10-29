@@ -11,8 +11,9 @@ var app = express();
 
 //app.use('/static', express.static('public'));
 module.exports = function(app) {
-    app.use(express.static('./public'));
-//        app.use(express.static(__dirname+'/public'));
+    // app.use('/static', express.static(__dirname + '/public'));
+
+
     // HTML GET Requests
     // Below code handles when users "visit" a page.
     // In each of the below cases the user is shown an HTML page of content
@@ -27,7 +28,7 @@ module.exports = function(app) {
     });
 
     // // If no matching route is found default to home
-    app.use(function(req, res) {
+    app.get('/', function(req, res) {
         res.sendFile(path.join(__dirname + '/../public/home.html'));
     });
 

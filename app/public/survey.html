@@ -6,8 +6,8 @@
     <!-- Latest compiled and minified CSS -->
     <!-- <link rel="stylesheet" href="reset.css">  -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap-cyborg.css">
-    <link rel="stylesheet" type="text/css" href="/css/MyEdits.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap-cyborg.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/MyEdits.css">
     <script src="https://code.jquery.com/jquery.js"></script>
 </head>
 
@@ -190,8 +190,13 @@ $("#submit").on("click", function() {
 
 
     function findMatch(){
-
+        //var diff1= submittedNewFriend.scores[1] - friendsArray.scores [1]
+        for(var i=0; friendsArray.length; i++){
+        var diff1= submittedNewFriend.scores[1] - friendsArray.scores [1];
+        console.log (diff1);
     }
+}   
+findMatch();
 
     // This line is the magic. It's very similar to the standard ajax function we used.
     // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
