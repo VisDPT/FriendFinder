@@ -42,6 +42,7 @@
                         <label for="select" class="col-lg-6 control-label "> Question 1: I love dogs. </label>
                         <div class="col-lg-6">
                             <select class="form-control" id="select1">
+                                <option> </option>
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -53,6 +54,7 @@
                         <label for="select" class="col-lg-6 control-label"> Question 2: I love cats. </label>
                         <div class="col-lg-6">
                             <select class="form-control" id="select2">
+                                <option> </option>
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -64,6 +66,7 @@
                         <label for="select" class="col-lg-6 control-label"> Question 3: I love to do things outdoors.</label>
                         <div class="col-lg-6">
                             <select class="form-control" id="select3">
+                                <option> </option>
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -75,6 +78,7 @@
                         <label for="select" class="col-lg-6 control-label"> Question 4: I am always down for a night on the town.</label>
                         <div class="col-lg-6">
                             <select class="form-control" id="select4">
+                                <option> </option>
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -86,6 +90,7 @@
                         <label for="select" class="col-lg-6 control-label"> Question 5: I would prefer to curl up with a good book instead of a night on the town. </label>
                         <div class="col-lg-6">
                             <select class="form-control" id="select5">
+                                <option> </option>
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -97,6 +102,7 @@
                         <label for="select" class="col-lg-6 control-label"> Question 6: I love to try new foods and different cuisines! </label>
                         <div class="col-lg-6">
                             <select class="form-control" id="select6">
+                                <option> </option>
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -108,6 +114,7 @@
                         <label for="select" class="col-lg-6 control-label"> Question 7: I love to travel! </label>
                         <div class="col-lg-6">
                             <select class="form-control" id="select7">
+                                <option> </option>
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -119,6 +126,7 @@
                         <label for="select" class="col-lg-6 control-label"> Question 8: I love going to the theatre. </label>
                         <div class="col-lg-6">
                             <select class="form-control" id="select8">
+                                <option> </option>
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -130,6 +138,7 @@
                         <label for="select" class="col-lg-6 control-label">Question 9: I'd love to live in the city. </label>
                         <div class="col-lg-6">
                             <select class="form-control" id="select9">
+                                <option> </option>
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -141,6 +150,7 @@
                         <label for="select" class="col-lg-6 control-label">Question 10: I love cars! </label>
                         <div class="col-lg-6">
                             <select class="form-control" id="select10">
+                                <option> </option>
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -152,7 +162,7 @@
                     </div>
                     <div class="form-group">
                         <div class="col-lg-10 col-lg-offset-2">
-                            <button type="reset" class="btn btn-default">Cancel</button>
+                            <button type="reset" class="btn btn-default">Cancel/Reset</button>
                             <button type="submit" class="btn btn-primary" id="submit">Submit</button>
                         </div>
                     </div>
@@ -168,74 +178,69 @@
     </div>
 </body>
 <script type="text/javascript">
-$("#submit").on("click", function() {
+    $("#submit").on("click", function() {
 
-    // Here we grab the form elements
-    var scoresArray = [parseInt($('#select1').val()), parseInt($('#select2').val()),
-        parseInt($('#select3').val()), parseInt($('#select4').val()),
-        parseInt($('#select5').val()), parseInt($('#select6').val()),
-        parseInt($('#select7').val()), parseInt($('#select8').val()),
-        parseInt($('#select9').val()), parseInt($('#select10').val()),
-    ];
+        // Here we grab the form elements
+        var scoresArray = [parseInt($('#select1').val()), parseInt($('#select2').val()),
+            parseInt($('#select3').val()), parseInt($('#select4').val()),
+            parseInt($('#select5').val()), parseInt($('#select6').val()),
+            parseInt($('#select7').val()), parseInt($('#select8').val()),
+            parseInt($('#select9').val()), parseInt($('#select10').val()),
+        ];
 
-    var submittedNewFriend = {
-        name: $('#inputName').val(),
-        photo: $('#inputPic').val(),
-        scores: []
-    };
+        var submittedNewFriend = {
+            name: $('#inputName').val(),
+            photo: $('#inputPic').val(),
+            scores: []
+        };
 
-    submittedNewFriend.scores.push(scoresArray);
-    console.log(submittedNewFriend);
-    console.log(submittedNewFriend.scores);
+        submittedNewFriend.scores.push(scoresArray);
+        console.log(submittedNewFriend);
+        console.log(submittedNewFriend.scores);
 
 
-    function findMatch(){
-        //var diff1= submittedNewFriend.scores[1] - friendsArray.scores [1]
-        for(var i=0; friendsArray.length; i++){
-        var diff1= submittedNewFriend.scores[1] - friendsArray.scores [1];
-        console.log (diff1);
-    }
-}   
-findMatch();
 
-    // This line is the magic. It's very similar to the standard ajax function we used.
-    // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
-    // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
-    // depending on if a tables is available or not.
-
-    // Here we get the location of the root page.
-    // We use this instead of explicitly saying the URL is localhost:3001 because the url will change when we deploy.
-    var currentURL = window.location.origin;
-
-    $.post(currentURL + "/api/friend", submittedNewFriend,
-        function(data) {
-
-            // If a table is available... tell user they are booked.
-        
-            alert("Yay! You are officially booked!");
+        // function findMatch() {
+        //     //var diff1= submittedNewFriend.scores[1] - friendsArray.scores [1]
+        //     for (var i = 0; friendsArray.length; i++) {
+        //         var diff1 = submittedNewFriend.scores[1] - friendsArray.scores[1];
+        //         console.log(diff1);
+        //     }
+        // }
 
 
 
 
-            // Clear the form when submitting
-            $('#inputName').val("1");
-            $('#photoLink').val("1");
-            $('#select1').val("1");
-            $('#select2').val("1");
-            $('#select3').val("1");
-            $('#select4').val("1");
-            $('#select5').val("1");
-            $('#select6').val("1");
-            $('#select7').val("1");
-            $('#select8').val("1");
-            $('#select9').val("1");
-            $('#select10').val("1");
+        var currentURL = window.location.origin;
 
-        });
+        $.post(currentURL + "/api/friend", submittedNewFriend,
+            function(data) {
+                if (data == true) {
 
-    return false;
+                    alert("Here's your new Friend: " + "<a href= http://weknowyourdreams.com/images/smile/smile-03.jpg");
+                }
 
-});
+
+
+                // Clear the form when submitting
+                $('#inputName').val(" ");
+                $('#photoLink').val(" ");
+                $('#select1').val(" ");
+                $('#select2').val(" ");
+                $('#select3').val(" ");
+                $('#select4').val(" ");
+                $('#select5').val(" ");
+                $('#select6').val(" ");
+                $('#select7').val(" ");
+                $('#select8').val(" ");
+                $('#select9').val(" ");
+                $('#select10').val(" ");
+
+            });
+
+        return false;
+
+    });
 </script>
 
 </html>
